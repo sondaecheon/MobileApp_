@@ -9,6 +9,7 @@ import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -37,26 +38,52 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.w06.ui.theme.MoblieApp002Theme
 import kotlinx.coroutines.delay
 import kotlin.random.Random
+
+private var MainActivity.valmobileApp002Theme: Any
+    get() {
+        TODO()
+    }
+    set(value) {}
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            MoblieApp002Theme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    BubbleGameScreen()
+            val mobileApp002Theme = Box {
+                valmobileApp002Theme = MobileApp002Theme {
+                    Surface(
+                        modifier = Modifier.fillMaxSize(),
+                        color = MaterialTheme.colorScheme.background
+                    ) {
+                        BubbleGameScreen()
+                    }
                 }
             }
         }
     }
+
+
 }
+
+@Composable
+fun MobileApp002Theme(content: @Composable () -> Unit) {
+    MaterialTheme(
+        // 필요하다면 colorScheme, typography 등 커스터마이징 가능
+        content = content
+    )
+}
+
+
+@Composable
+fun MyComposable() {
+    // UI 코드
+}
+
+    // UI 코드
+
 
 // 버블의 속성을 담는 데이터 클래스
 // --- 데이터 클래스 (단위: dp) ---
@@ -211,7 +238,7 @@ fun BubbleComposable(bubble: Bubble, onClick: () -> Unit) {
     Canvas(
         modifier = Modifier
             .offset(x = bubble.position.x.dp, y = bubble.position.y.dp)
-            .size((bubble.radius * 2 ).dp)
+            .size((bubble.radius * 2).dp)
             .clickable(
                 interactionSource = remember { MutableInteractionSource() },
                 indication = null,
