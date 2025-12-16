@@ -50,6 +50,25 @@ memo
 
 익명 타이머
 
+- ComponentActivity : Compose UI 진입점
+- setContent { } : Compose 화면 설정
+- MaterialTheme : 머티리얼 디자인 적용
+- @Composable : UI 구성 함수
+- remember + mutableStateOf : 화면 상태 관리
+- screen 상태값 : 입력 화면 / 타이머 화면 전환
+- 조건 분기(if) : 화면 전환 처리
+- 함수 분리(GoalInputScreen, TimerScreen) : 화면 역할 분리
+- TextField 입력 필터 : 숫자만 입력 허용
+- toIntOrNull : 안전한 숫자 변환
+- 시간 계산(h*3600+m*60+s) : 초 단위 변환
+- LaunchedEffect : 타이머 코루틴 실행
+- delay(1000) : 1초 단위 카운트다운
+- LazyColumn : 기록 목록 표시
+- 불변 리스트(records + 항목) : 기록 추가
+- Modifier : 레이아웃·스타일 설정
+- Card / RoundedCornerShape : UI 카드 스타일링
+- Color / FontWeight / sp : 색상·폰트 설정
+
  과정: 타이머 기능은 직접 만들고 익명 부분은 인터넷에서 찾아보다가 chat GPT에게 도움 받음
 
 <img width="387" height="866" alt="image" src="https://github.com/user-attachments/assets/e995318c-e37d-402d-aa82-afd5d57eb5ab" />
