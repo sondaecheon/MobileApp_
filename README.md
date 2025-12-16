@@ -4,6 +4,26 @@ MobileApp
 
 memo
 
+- ComponentActivity: Compose UI를 사용하는 액티비티 기본 클래스 (XML 미사용)
+
+- @Composable: UI를 그리는 함수, 상태 변경 시 자동으로 화면 갱신
+
+- remember + mutableStateOf: 상태(State) 저장, 값 변경 시 Recomposition 발생
+
+- by 위임(Property Delegation): state.value 생략, 코드 간결화
+
+- LaunchedEffect(Unit): 컴포지션 최초 1회 실행되는 사이드 이펙트 (초기 데이터 로드)
+
+- SharedPreferences + edit {}: 간단한 로컬 데이터 저장, 람다로 자동 commit/apply
+
+- 불변 리스트 업데이트 (memoList + text): 기존 데이터 유지 + 새 리스트 생성 → 상태 관리 안정적
+
+- LazyColumn: 대량 리스트용 Compose UI (RecyclerView 대체)
+
+- Modifier.clickable: View 없이 클릭 이벤트 처리
+
+- LocalContext: Composable 내부에서 Context 접근
+- 
 
 <img width="402" height="872" alt="image" src="https://github.com/user-attachments/assets/4ceb30e1-33e4-453f-9429-40c7f0a81408" />
 
