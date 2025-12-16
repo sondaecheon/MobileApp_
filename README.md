@@ -2,6 +2,29 @@
 MobileApp
 손대천
 
+myapp
+
+- ComponentActivity : Compose UI 액티비티
+- enableEdgeToEdge : 시스템 UI 영역 확장
+- setContent { } : Compose 화면 설정
+- @Composable : UI 구성 함수
+- remember + mutableStateOf : 입력값·목록 상태 관리
+- data class TodoItem : 할 일 데이터 모델
+- Scaffold : 상단바·FAB 포함 기본 레이아웃
+- CenterAlignedTopAppBar : 중앙 정렬 앱바
+- FloatingActionButton : 할 일 추가 버튼
+- LazyColumn : 할 일 목록 표시
+- items(todos) : 리스트 반복 렌더링
+- Row / Column : 가로·세로 레이아웃 구성
+- Checkbox : 완료 여부 상태 변경
+- copy() : 특정 항목만 상태 변경
+- 불변 리스트(map) : 상태 안전 업데이트
+- Modifier : 크기·여백·정렬 설정
+- MaterialTheme : 텍스트 스타일·색상 적용
+- Preview : 미리보기 화면 표시
+
+ 과정: chat GPT가 짠 코드를 살짝 수정만 함
+
 Login
 
 - ComponentActivity : Compose UI용 액티비티
