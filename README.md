@@ -2,6 +2,25 @@
 MobileApp
 손대천
 
+Login
+
+- ComponentActivity : Compose UI용 액티비티
+- setContent { } : XML 없이 화면 구성
+- @Composable : UI 함수
+- remember + mutableStateOf : 입력 상태 저장
+- by 위임 : state.value 생략
+- Column + Arrangement + Alignment : 세로 배치, 중앙 정렬
+- OutlinedTextField : 텍스트 입력
+- PasswordVisualTransformation : 비밀번호 마스킹
+- Patterns.EMAIL_ADDRESS : 이메일 형식 검증
+- when 조건문 : 입력값 분기 처리
+- Toast : 결과 메시지 출력
+- MaterialTheme / LoginTheme : 앱 테마 적용
+- Modifier.fillMaxWidth / padding : 크기·여백 설정
+
+ 과정: 기본적으로 직접 코드를 짠 후 에러난 코드만 chat GPT에게 물어봄
+
+
 memo
 
 - ComponentActivity: Compose UI를 사용하는 액티비티 기본 클래스 (XML 미사용)
@@ -23,12 +42,15 @@ memo
 - Modifier.clickable: View 없이 클릭 이벤트 처리
 
 - LocalContext: Composable 내부에서 Context 접근
-- 
+
+  과정: 수업시간 PPT 활용 및 인터넷 검색
+
 
 <img width="402" height="872" alt="image" src="https://github.com/user-attachments/assets/4ceb30e1-33e4-453f-9429-40c7f0a81408" />
 
 익명 타이머
 
+ 과정: 타이머 기능은 직접 만들고 익명 부분은 인터넷에서 찾아보다가 chat GPT에게 도움 받음
 
 <img width="387" height="866" alt="image" src="https://github.com/user-attachments/assets/e995318c-e37d-402d-aa82-afd5d57eb5ab" />
 <img width="386" height="856" alt="image" src="https://github.com/user-attachments/assets/cae9b512-b2c3-4002-aa37-d286d58c6cc0" />
